@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CWA Deficit Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CWA Deficit Calculator</h1>
+        <div class="theme-switcher">
+            <span>Light Mode</span>
+            <label class="switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider"></span>
+            </label>
+            <span>Dark Mode</span>
+        </div>
+        <form id="cwaForm">
+            <label for="goal">Goal CWA:</label>
+            <input type="number" id="goal" step="0.01" required>
+            
+            <label for="totalCredits">Total Credits:</label>
+            <input type="number" id="totalCredits" required>
+            
+            <label for="CRS">Current Total CRS (Current CWA * Completed Credits):</label>
+            <input type="number" id="CRS" required>
+            
+            <label for="currentCredit">Current Semester Credits:</label>
+            <input type="number" id="currentCredit" required>
+            
+            <button type="button" onclick="handleCalculateCWA()">Calculate</button>
+            <button type="button" onclick="handleReset()">Reset</button>
+        </form>
+        <p id="result"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
