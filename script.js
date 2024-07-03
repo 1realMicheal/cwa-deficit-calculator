@@ -23,7 +23,7 @@ function handleCalculateCWA() {
         // Calculate CWA deficit
         const result = CWAdeficit(goal, totalCredits, CRS, currentCredit);
     if (result<100){
-        document.getElementById('result').innerText = `You need to achieve a SWA of approximately ${result} in the current semester to reach your goal CWA of ${goal}.`;
+        document.getElementById('result').innerText = `You need to achieve an SWA of approximately ${result} in the current semester to reach your goal CWA of ${goal}.`;
     }
         else{
              document.getElementById('result').innerText = `It is not possible to achieve ${result} in a single semester,Lower your expectations`;
