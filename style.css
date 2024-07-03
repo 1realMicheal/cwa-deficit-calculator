@@ -167,3 +167,128 @@ body.dark-mode button[type="button"]:last-child {
 body.dark-mode #result {
     color: #f0f0f0;
 }
+/* Ensure the body and html take up the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Flexbox layout for the body */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content container */
+.container {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Footer styles */
+/* Ensure the body and html take up the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Flexbox layout for the body */
+body {
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for light/dark mode */
+}
+
+/* Main content container */
+.container {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Light mode styles */
+body:not(:has(#themeToggle:checked)) {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+body:not(:has(#themeToggle:checked)) footer {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/* Dark mode styles */
+body:has(#themeToggle:checked) {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body:has(#themeToggle:checked) footer {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-top: 1px solid #333;
+}
+
+/* Theme switcher styles */
+.theme-switcher {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Switch styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+    margin: 0 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+/* Form and button styles */
+form {
+    margin-bottom: 20px;
+}
+
+button {
+    margin-right: 10px;
+}
